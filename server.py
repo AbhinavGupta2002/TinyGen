@@ -38,7 +38,6 @@ def process_request(data: RequestBody):
 
     response: FileSystem = llmResponder.invoke(helper.promptGenerator["getResponse"](fileContent, data.prompt))
     while not helper.isValidFileNames(fileContent, response.files): # confirm that the llm outputs the right file names
-        print("file names not valid")
         response = llmResponder.invoke(helper.promptGenerator["getResponse"](fileContent, data.prompt))
     reflection: Reflection = llmReflector.invoke(helper.promptGenerator["getReflection"](fileContent, response.files, data.prompt))
     helper.updateFileContent(fileContent, response.files)
@@ -48,7 +47,6 @@ def process_request(data: RequestBody):
         revisions += 1
         response = llmResponder.invoke(helper.promptGenerator["getRevision"](fileContent, reflection.modifications, data.prompt))
         while not helper.isValidFileNames(fileContent, response.files): # confirm that the llm outputs the right file names
-            print("file names not valid reflection")
             response = llmResponder.invoke(helper.promptGenerator["getRevision"](fileContent, reflection.modifications, data.prompt))
         reflection = llmReflector.invoke(helper.promptGenerator["getReflection"](fileContent, response.files, data.prompt))
         helper.updateFileContent(fileContent, response.files)
