@@ -58,10 +58,7 @@ def process_request(data: RequestBody):
     dbSession.disconnect()
 
     return {
-        "response": response,
-        "reflection": reflection,
-        "diff": repo.getDiff(),
-        "revisions": revisions
+        "diff": repo.getDiff()
     }
 
 @app.get("/requests")
