@@ -2,7 +2,7 @@
 
 AI powered API service that can modify your GitHub code in seconds
 
-Built for CodeGen's New Grad role home assigment**
+Built for CodeGen's New Grad role home assigment
 
 **Developed by Abhinav Gupta**
 
