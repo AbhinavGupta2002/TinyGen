@@ -20,8 +20,9 @@ app = FastAPI(
 )
 
 OPENAI_KEY = os.getenv('OPENAI_KEY')
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-2024-08-06")
 
-llm = ChatOpenAI(api_key=OPENAI_KEY, model="gpt-4o-mini")
+llm = ChatOpenAI(api_key=OPENAI_KEY, model=OPENAI_MODEL)
 llmResponder = llm.with_structured_output(FileSystem)
 llmReflector = llm.with_structured_output(Reflection)
 
