@@ -19,5 +19,5 @@ Built for CodeGen's New Grad role home assigment**
 
 - Supabase DB was integrated to post responses along with the prompts from API requests. There is another to fetch these.
 - Built a reflection strategy where an LLM agent reflects on the response and suggests modifications. Then, the revsiion LLM agent makes enhancements based on the modifications. This is a cyclical process.
-- Built a GitRepoHandler service to abstract all operations associated with the repository for code readability and modularity.
-- Built a SessionHandler service to abstract all operations associated with Supabase for code readability and modularity.
+- Built a `GitRepoHandler` service to abstract all operations associated with the repository for code readability and modularity.
+- Built a `SessionHandler` service to abstract all operations associated with Supabase for code readability and modularity.
