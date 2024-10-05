@@ -11,7 +11,7 @@ Built for CodeGen's New Grad role home assigment
 - Clone this repository
 - Setup a virtual environment
 - Run `pip install -r requirements.txt`
-- Set `OPENAI_KEY` and `DATABASE_URI` in the `.env` file
+- Create a `.env` file and set values to `OPENAI_KEY` and `DATABASE_URI` keys in it
 - Run `python server.py`
 - Open `http://localhost:8000/docs` on the browser to see the API docs
 
