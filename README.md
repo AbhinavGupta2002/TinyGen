@@ -4,8 +4,6 @@ Try It Out: https://tinygen-terq.onrender.com/docs
 
 AI powered API service that can modify your GitHub code in seconds
 
-Built for CodeGen's New Grad role home assigment
-
 **Developed by Abhinav Gupta**
 
 ## Setup Instructions
